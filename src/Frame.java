@@ -14,8 +14,8 @@ public class Frame extends JFrame{
     public Frame()
     {
 
-//        String getText_feild01 = "";
         setContentPane(MainPanel);
+        setTitle("Sinhala Words Listing Alphabetical Order");
         setSize(1080, 720);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setVisible(true);
@@ -28,7 +28,7 @@ public class Frame extends JFrame{
 
 
                 String[] sinhalaWords = getText_feild01.split("\n");
-//                String[] sinhalaWords = {"මිෂාන්", "නබි", "කබි", "පස", "මිෂ", "මෂ", "මිෂා"};
+                // String[] sinhalaWords = {"මිෂාන්", "නබි", "කබි", "පස", "මිෂ", "මෂ", "මිෂා"};
                 // Creating a Sinhala collator to compare and sort Sinhala words
                 Collator collator = Collator.getInstance(new Locale("si", "LK"));
                 collator.setStrength(Collator.PRIMARY);
@@ -39,12 +39,10 @@ public class Frame extends JFrame{
                 // Displaying the words in Sinhala alphabetical order
                 System.out.println("Words in Sinhala alphabetical order:");
                 for (String word : sinhalaWords) {
-//                    System.out.println(word);
+                    // System.out.println(word);
                     orderedtext.append(word+"\n");
                 }
 
-
-//                System.out.println(getText_feild01);
             }
         });
     }
